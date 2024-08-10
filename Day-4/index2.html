@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .container {
+                position: relative;
+            }
+            .con {
+                border: 2px solid red;
+                height: 70vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .box {
+                border: 2px solid blue;
+                display: flex;
+            }
+        </style>
+        <!-- relative starts from original position and space  -->
+        <!-- absolute with respect to browser window -->
+        <!-- fixed - fixed wrt page -->
+        <!-- sticky will also made the bar fixed but it will stick when the content is scroll down -->
+        <!-- z-index along with position -->
+        <!-- order - position back -will be last child -->
+        <!-- flex-grow grow with double speed (Child)-->
+        <!-- flex-shrink - shrink with double speed (Child) -->
+        <!-- flex-basis will be first default width  (Child)-->
+        <!-- wrap shrink basis flex; -->
+        <!-- align-self (Child) -->
+    </head>
+    <body>
+        <div class="container">Lorem ipsum dolor sit amet.</div>
+        <div>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta sit
+            rerum eligendi odio atque ullam?
+        </div>
+        <div class="head"></div>
+        <div>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta sit
+            rerum eligendi odio atque ullam?
+        </div>
+
+        <div class="con">
+            <div class="box" id="box1">Box - 1</div>
+            <div class="box" id="box1">Box - 2</div>
+            <div class="box" id="box1">Box - 3</div>
+            <div class="box" id="box1">Box - 4</div>
+        </div>
+    </body>
+</html>

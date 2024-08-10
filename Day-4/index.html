@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 30px;
+            height: 30px;
+            background-color: burlywood;
+            border: 20px solid black;
+            padding: 20px;
+            margin: 20px;
+            font-size: 10px;
+            box-sizing: border-box;
+        }
+
+        a[target]{
+            font-size: 20px;
+            color: brown;
+        } 
+
+        a[target="_blank"]{
+            font-size: 20px;
+            color: brown;
+        }
+
+        #container1{
+            background-color: rgb(49, 240, 202);
+        }
+
+        #name
+        {
+            background-color: darkblue;
+        }
+
+        #name,#container1{
+            width: 30px;
+            height: 30px;
+            border: 3px solid black;
+            border-radius: 10px;
+        }
+        #main{
+            width: 30px;
+            height: 30px;
+            background-color: rgb(135, 206, 222);
+            border: 20px solid black;
+            padding: 20px;
+            margin: 20px;
+            font-size: 10px;
+            box-sizing: border-box;
+        }
+
+        #para{
+            font-size: 30px;
+            color: rgb(50, 11, 113);
+        }
+
+        #con{
+            font-size: 30px;
+            color: rgb(50, 11, 113);
+        }
+        #child > p{
+            font-size: 20px;
+            color: royalblue;
+        }
+
+        #units{
+            width: 50vw;
+            height: 50vh;
+            background-color: darksalmon;
+        }
+    </style>
+</head>
+<body>
+    <!-- box model , alternatie box model,nested css,grouping,display,
+    position properties,flex,grid,pseudo classes ,selectors , units overflow -->
+    <div id="container">
+        regular box
+    </div>
+    <div id="main">
+        alternate box
+    </div>
+    <div id="con">
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dolore voluptates, eveniet magni deserunt aliquam eius necessitatibus temporibus non laborum.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, consequatur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, consequatur.</p>
+    </div>
+
+    <!-- grouping -->
+    <div id="container1">
+    </div>
+    <div id="name"></div>
+
+    <!-- child combinators -->
+    <div id="child">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, quam.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, aut.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, consequuntur.</p>
+    </div>
+
+    <hr>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+
+    <a href="####" target="_blank">Google</a>
+    <a href="####">Google</a>
+
+    <!-- px,vh,vw,em rem -->
+    <div id="units">Helloo</div>
+
+    <!-- em -> parent component if parent component has 20 px than 1em = 20px while 2em = 40px and this can also be usel in margin -->
+</body>
+</html>
