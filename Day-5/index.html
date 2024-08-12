@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #google:active {
+            background-color: black;
+            color: green;
+            padding: 5px;
+        }
+
+        /*#container{
+            width: 200px;
+            height: 200px;
+            background-color: cadetblue;
+        }
+        #container:hover{
+            background-color: aqua;
+            width: 200px;
+            height: 200px;
+        }*/
+        /*ul li:first-child{
+            background-color: blue;
+        }
+        ul li:last-child{
+            background-color: blue;
+        }
+        /an + b/
+        /*ul li:nth-child(2n+1){
+            background-color: rgb(206, 13, 13);
+
+        }*/
+        /*::selection{
+            background-color: black;
+            color: aqua;
+        }*/
+        /*#para::first-letter{
+            background-color: aquamarine;
+        }
+        #para::first-line{
+            background-color: rgb(226, 28, 94);
+        }*/
+        #para:hover::before {
+            content: "Hello Techno";
+            background-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- pseudo classes and elements -->
+    <!-- classes = hover , active , visited , first child , last child , nth child -->
+    <!-- elements = first letter , first line , before , after , selection -->
+    <a href="##" id="google">Google</a>
+    <div id="container"></div>
+    <!-- ul>li{item-$}*8 -->
+    <ul>
+        <li>item-1</li>
+        <li>item-2</li>
+        <li>item-3</li>
+        <li>item-4</li>
+        <li>item-5</li>
+        <li>item-6</li>
+        <li>item-7</li>
+        <li>item-8</li>
+    </ul>
+    <p id="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Velit, numquam consequatur suscipit vero perspiciatis possimus eaque! Eum officia cupiditate suscipit!</p>
+</body>
+
+</html>
