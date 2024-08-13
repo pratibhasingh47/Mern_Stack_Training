@@ -78,6 +78,7 @@ const {
     Age,
     address: { path },
 } = person;
+
 console.log(Name + " " + Age + " " + path);
 
 person.email = "vscode@google.com";
