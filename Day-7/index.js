@@ -1,41 +1,3 @@
-console.log("Hello Pratibha");
-
-// var a = [10, 20, 30, [], [], "Shubham"];
-
-// console.log(a);
-// console.log(typeof a);
-
-// JSON - JS Object Notation
-
-var a = {
-    firstName: "ABC",
-    lastName: "Jain"
-}
-
-var date = new Date();
-// console.log(typeof a);
-
-// var a = 1000;
-// var a = 90;
-
-let c = 20;
-c = 40;
-
-// const b= 40;
-
-// Airthematic operator
-
-let ax = 10;
-let b = 20;
-
-let sum = ax + b;
-let sub = ax - b;
-let mul = ax * b;
-let div = ax / b;
-let exp = ax ** b;
-
-console.log(sum, sub, mul, div, exp);
-
 console.log("Day-7 -> Starting JS.")
 
 var Array_1 = [1, 5.105, "A", true, undefined, [], [1, 2, 3], { A: 1, B: 2 }]
@@ -49,7 +11,7 @@ a = 20;
 a++;
 console.log(a);
 
-const bb = 30;
+const b = 30;
 console.log(b);
 
 console.log("a + b = ", a + b);
@@ -149,6 +111,8 @@ console.log(todoJSON);
 
 let num1 = 50;
 let num2 = "50";
-
-console.log(num === num2);
-console.log(num === +num2);   //type coersion
+console.log("\n5+'5' : ", 5 + '5', " Type:", typeof (5 + '5'))
+console.log("num1 == num2   :", num1 == num2)
+console.log("num1 === num2  :", num1 === num2)
+console.log("num1 === +num2 :", num1 === +num2) //! type coersion
+console.log("Hell" && 'A' || 20) //! Short-Circuit Evaluation
