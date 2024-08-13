@@ -146,3 +146,9 @@ console.log(todo[1].text.split(" "));
 
 const todoJSON = JSON.stringify(todo); //! to  send data to server in json
 console.log(todoJSON);
+
+let num1 = 50;
+let num2 = "50";
+
+console.log(num === num2);
+console.log(num === +num2);   //type coersion
