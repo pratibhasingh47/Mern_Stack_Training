@@ -28,13 +28,13 @@ c = 40;
 let ax = 10;
 let b = 20;
 
-let sum = ax+b;
-let sub = ax-b;
-let mul = ax*b;
-let div = ax/b;
-let exp = ax**b;
+let sum = ax + b;
+let sub = ax - b;
+let mul = ax * b;
+let div = ax / b;
+let exp = ax ** b;
 
-console.log(sum,sub,mul,div,exp);
+console.log(sum, sub, mul, div, exp);
 
 console.log("Day-7 -> Starting JS.")
 
