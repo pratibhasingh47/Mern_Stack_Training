@@ -11,3 +11,7 @@ else{
     alert("Authentication Failed");
 }
 
+(userName === "admin" && password === 123) ? alert("Authentication Successful") : alert("Authentication Failed");
+// In ternary it is mandatory to include else condition
+
+
