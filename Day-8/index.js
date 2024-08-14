@@ -52,3 +52,12 @@ const sum = () =>{
     console.log("This is arrow function");
 }
 
+function sum(a,b){
+    return a+b;
+}
+
+console.log(sum(10,20));
+
+const add = (a,b)=>a+b;
+
+//Arrays,Object
