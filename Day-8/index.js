@@ -68,3 +68,9 @@ let nestedArr = [10,20,30,[1,2,3,4],[20,30,40,["aaa" , "bbb",[true,false]]]]
 
 let newArr = nestedArr[nestedArr.length-1][nestedArr[nestedArr.length-1].length-1][nestedArr[nestedArr.length-1][nestedArr[nestedArr.length-1].length-1].length-1][0];
 console.log(newArr);
+
+let obj1 = {
+    fname : "AK",
+    lname : "47"
+}
+console.log(obj1.fname);
