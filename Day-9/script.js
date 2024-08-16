@@ -60,4 +60,4 @@
 // console.log(arr);
 
 //Concat
-map return new arraywith the same length as original
+// map return new arraywith the same length as original
