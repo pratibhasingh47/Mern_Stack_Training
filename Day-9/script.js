@@ -62,7 +62,7 @@
 //Concat
 // map return new arraywith the same length as original
 
-"use strict"
+// "use strict"
 // loops , strict mode , console types , array methods
 
 // while , do while , for 
