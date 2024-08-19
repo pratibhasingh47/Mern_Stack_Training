@@ -116,7 +116,7 @@
 //     console.log(item);
 // }
 
-let a = 20;
+// let a = 20;
 // b = 30;
 // console.log(b);
 
