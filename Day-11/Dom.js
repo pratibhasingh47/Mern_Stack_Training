@@ -8,7 +8,7 @@ console.log(myDiv.className);
 console.log(myDiv.getAttribute("class"));
 console.log(myDiv.getAttribute("id"));
 
-myDiv.setAttribute("class" , "tail");
+myDiv.setAttribute("class", "tail");
 
 // myDiv.innerHTML
 // myDiv.innerText
