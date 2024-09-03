@@ -48,6 +48,7 @@ function App() {
       <button onClick={()=>{console.log(inputRef)}}>Show Ref Value</button> */}
       {/* <Navbar /> */}
       {/* <RouterProvider router={Router} /> */}
+      <Navbar/>
       <p>
         The Total sum is : {sum}
       </p>
