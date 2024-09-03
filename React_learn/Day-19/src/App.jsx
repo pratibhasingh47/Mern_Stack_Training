@@ -54,10 +54,10 @@ const data = [
 
 function App() {
 
-  const [count , setCount] = useState(0);
-  const [productId , setProductId] = useState(1);
+  const [count, setCount] = useState(0);
+  const [productId, setProductId] = useState(1);
 
-  const fetchData = async (id)=>{
+  const fetchData = async (id) => {
     try {
       const response = await fetch(`https://fakestoreapi.com/products/${id}`);
       const data = await response.json();
@@ -68,10 +68,10 @@ function App() {
   }
 
 
-  useEffect(()=>{
+  useEffect(() => {
     console.log("Inside UseEffect")
     fetchData(productId);
-  },[productId])
+  }, [productId])
 
   return (
     <div className="p-4 h-screen text-center">
@@ -90,7 +90,7 @@ function App() {
           
         })
       } */}
-      
+
     </div>
   )
 }
