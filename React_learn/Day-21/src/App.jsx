@@ -17,8 +17,8 @@ import Router from "./router/Router";
 
 function App() {
 
-  const [count , setCount] = useState(0);
-  const [numbers , setNumbers ] = useState([10,20,30,40,50,60,70]);
+  const [count, setCount] = useState(0);
+  const [numbers, setNumbers] = useState([10, 20, 30, 40, 50, 60, 70]);
 
   // const inputRef = useRef(null);
 
@@ -26,33 +26,33 @@ function App() {
   //   inputRef.current.focus();
   // },[])
 
-  const sum = useMemo(()=>{
+  const sum = useMemo(() => {
     console.log("Reduced Called");
-   return numbers.reduce((acc,curr)=>{
+    return numbers.reduce((acc, curr) => {
       return acc + curr;
-    },0);
-  },[numbers]);
+    }, 0);
+  }, [numbers]);
 
   return (
     <div className="p-4 ">
-      
+
       <p>
-      {count} 
+        {count}
       </p>
-       <button onClick={()=>setCount(count+1)}>Inc Count</button>
-       <div>
-       <button onClick={()=>{setNumbers([...numbers , 1000])}}>Push Number to array</button>
-       </div>
-       
+      <button onClick={() => setCount(count + 1)}>Inc Count</button>
+      <div>
+        <button onClick={() => { setNumbers([...numbers, 1000]) }}>Push Number to array</button>
+      </div>
+
       {/* <input type="text" placeholder="Enter Name" ref={inputRef} />
       <button onClick={()=>{console.log(inputRef)}}>Show Ref Value</button> */}
       {/* <Navbar /> */}
       {/* <RouterProvider router={Router} /> */}
       <p>
-      The Total sum is : {sum}
+        The Total sum is : {sum}
       </p>
-      
-      
+
+
     </div>
   )
 }
