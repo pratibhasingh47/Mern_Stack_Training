@@ -3,6 +3,7 @@ import Card from "./Card"
 import Login from "./Login"
 import State from "./State"
 import Child from "./Child";
+import Reducer from "../../Day-22/src/Reducer";
 
 
 // const data = [
@@ -79,9 +80,9 @@ function App() {
       {/* <button className="bg-green-400 mx-3" onClick={()=>{setCount(count+1)}}>Inc Count</button>
       <button className="bg-gray-300" onClick={()=>{setProductId(productId+1)}}>Inc Product Id</button> */}
       {/* <State /> */}
-      <Login />
+      {/* <Login /> */}
       <p className="text-2xl font-medium">App</p>
-      <Child />
+      {/* <Child /> */}
       {/* {
         data.map((item , i)=>{
           return (
@@ -90,6 +91,8 @@ function App() {
           
         })
       } */}
+
+      <Reducer/>
 
     </div>
   )
