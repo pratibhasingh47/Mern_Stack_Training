@@ -70,6 +70,7 @@ console.log(path.join("usr", "ref", "folder", "bin"));
 console.log(path.resolve("usr", "ref", "folder", "bin"));
 
 const server = http.createServer((req, res) => {
+    console.log(req);
     if (req.url == "/") {
         res.end("Welcome to http server")
     } else if (req.url == "/about") {
