@@ -1,6 +1,7 @@
 // const fs = require("fs"); //same as-> input fs from "fs";
 const os = require("os");
 const path = require("path");
+const http = require("http");
 
 // fs.writeFileSync("read.txt","Welcome to the first file");
 
@@ -54,8 +55,8 @@ const path = require("path");
 
 console.log(os.arch());
 console.log(os.platform());
-console.log(os.totalmem()/1024/1024/1024);
-console.log(os.freemem()/1024/1024/1024);
+console.log(os.totalmem() / 1024 / 1024 / 1024);
+console.log(os.freemem() / 1024 / 1024 / 1024);
 console.log(os.hostname());
 
 console.log(path.dirname("/home/pratibhasingh/Documents/Programming/Mern_Stack_Training/Nodejs/Day-23/index.js"));
@@ -65,5 +66,22 @@ console.log(path.extname(filepath));
 console.log(path.extname("index.js"));
 console.log(path.parse(filepath));
 
-console.log(path.join("usr","ref","folder","bin"));
-console.log(path.resolve("usr","ref","folder","bin"));
+console.log(path.join("usr", "ref", "folder", "bin"));
+console.log(path.resolve("usr", "ref", "folder", "bin"));
+
+const server = http.createServer((req, res) => {
+    if (req.url == "/") {
+        res.end("Welcome to http server")
+    } else if (req.url == "/about") {
+        res.end("About us page")
+    }
+    else {
+        res.end("Unknown Page")
+    }
+})
+
+server.listen(3000, "127.0.0.1", () => {
+    console.log("Sever is running on 3000 port");
+    console.log("http://127.0.0.1:3000/");
+});
+
