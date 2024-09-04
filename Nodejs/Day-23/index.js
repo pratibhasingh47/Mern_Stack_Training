@@ -13,7 +13,7 @@ data = fs.readFileSync("read.txt");
 fs.renameSync("read.txt","read_write.txt");
 
 // fs.writeFile("read.txt","This is secoond file");
-fs.writeFile("read.txt","This is secoond file",(error)=>{
+fs.writeFile("read.txt","This is second file",(error)=>{
     if(error){
         console.log(error);
     }
@@ -21,3 +21,17 @@ fs.writeFile("read.txt","This is secoond file",(error)=>{
         console.log("File Created");
     }
 });
+
+fs.appendFile("read.txt"," This is appended", (err)=>{
+    console.log("File Updated");
+})
+
+fs.readFile("read.txt","UTF-8",(err,data)=>{
+    console.log(data);
+})
+
+// UTF-8 "File encoding"
+
+fs.unlink("read.txt",(err)=>{
+    console.log("File deleted");    
+})
