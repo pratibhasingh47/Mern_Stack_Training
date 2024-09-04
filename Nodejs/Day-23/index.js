@@ -11,3 +11,13 @@ fs.appendFileSync("read.txt"," _Hello subahKaSitara");
 data = fs.readFileSync("read.txt");
 
 fs.renameSync("read.txt","read_write.txt");
+
+// fs.writeFile("read.txt","This is secoond file");
+fs.writeFile("read.txt","This is secoond file",(error)=>{
+    if(error){
+        console.log(error);
+    }
+    else{
+        console.log("File Created");
+    }
+});
