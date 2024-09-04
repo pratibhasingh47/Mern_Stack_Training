@@ -1,4 +1,5 @@
 const fs = require("fs"); //same as-> input fs from "fs";
+const os = require("os");
 
 fs.writeFileSync("read.txt","Welcome to the first file");
 
@@ -34,4 +35,18 @@ fs.readFile("read.txt","UTF-8",(err,data)=>{
 
 fs.unlink("read.txt",(err)=>{
     console.log("File deleted");    
+})
+
+fs.mkdir("Directory_1",(err)=>{
+    console.log("Directory created");
+})
+
+fs.writeFile("./Directory_1/File_1.txt","File1",()=>{});
+
+fs.unlink("./Directory_1/File_1.txt",(e)=>{
+    console.log("File Deleted");
+})
+
+fs.rmdir("Directory_1",(e)=>{
+    console.log("Directory removed");
 })
