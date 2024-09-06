@@ -21,13 +21,13 @@ const http = require("http");
 
 let storedData;
 
-const server = http.createServer((req,res)=>{
+const server = http.createServer((req, res) => {
     let body = "";
-    if(req.method === "POST"){
-        req.on("data",(chunk)=>{
+    if (req.method === "POST") {
+        req.on("data", (chunk) => {
             body += chunk.toString();
         });
-        req.on("end",()=>{
+        req.on("end", () => {
             console.log(typeof body);
             storedData = JSON.parse(body);
             console.log(storedData);
