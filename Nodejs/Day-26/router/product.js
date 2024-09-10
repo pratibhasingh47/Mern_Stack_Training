@@ -1,6 +1,6 @@
 const express = require("express");
 
-const router = express.router;
+const router = express.Router();
 
 router.get("/products",(req,res)=>{ // http:localhost:3000/product/products
     
