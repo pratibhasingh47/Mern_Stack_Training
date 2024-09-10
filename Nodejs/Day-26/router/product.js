@@ -2,19 +2,19 @@ const express = require("express");
 
 const router = express.Router();
 
-router.get("/products",(req,res)=>{ // http:localhost:3000/product/products
-    
-})
-
-router.post("/createProduct",(req,res)=>{ // http:localhost:3000/product/createProduct
+router.get("/products", (req, res) => { // http:localhost:3000/product/products
 
 })
 
-router.put("/updateProduct",(req,res)=>{ // http:localhost:3000/product/updateProduct
+router.post("/createProduct", (req, res) => { // http:localhost:3000/product/createProduct
 
 })
 
-router.delete("/deleteProduct",(req,res)=>{ // http:localhost:3000/product/deleteProduct
+router.put("/updateProduct", (req, res) => { // http:localhost:3000/product/updateProduct
+
+})
+
+router.delete("/deleteProduct", (req, res) => { // http:localhost:3000/product/deleteProduct
 
 })
 
