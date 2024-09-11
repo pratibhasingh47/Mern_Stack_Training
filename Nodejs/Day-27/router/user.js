@@ -38,6 +38,7 @@ const express = require("express");
 
 const router = express.Router();
 const users = require("../user");
+const fs = require("fs");
 
 
 router.get("/users", (req, res) => {            //http://localhost:3000/api/users
