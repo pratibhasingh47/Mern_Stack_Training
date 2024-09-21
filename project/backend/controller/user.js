@@ -1,7 +1,7 @@
 const User = require("../model/user");
 const bcrypt = require("bcrypt");
 
-exports.signup = async (req, res , next) => {
+exports.signup = async (req, res, next) => {
     try {
         const { name, email, password, phoneNumber } = req.body;
         const isExisting = await User.findOne({ email: email });
@@ -33,12 +33,12 @@ exports.signup = async (req, res , next) => {
 }
 
 
-exports.login = async (req,res,next) =>{
+exports.login = async (req, res, next) => {
     try {
-        const { email , password} = req.body;
-        const isExisting = await User.findOne( {email : email});
+        const { email, password } = req.body;
+        const isExisting = await User.findOne({ email: email });
 
-        if( ! isExisting){
+        if (!isExisting) {
             // return res.status(404).send({message : "User not found"});
             const error = new Error("User Not Found");
             // error.name = "UserNotFound";
@@ -46,10 +46,10 @@ exports.login = async (req,res,next) =>{
             throw error;
         };
 
-        const isMatched = await bcrypt.compare(password,isExisting.password);
+        const isMatched = await bcrypt.compare(password, isExisting.password);
         // const isMatched = password === isExisting.password;
 
-        if(!isMatched){
+        if (!isMatched) {
             // return res.status(401).send({message : "Password not matched"})
             const error = new Error("Password not matched");
             // error.name = "UserNotFound";
@@ -57,7 +57,7 @@ exports.login = async (req,res,next) =>{
             throw error;
         }
 
-        res.status(200).send({message : "User loged-in" , data : isExisting})
+        res.status(200).send({ message: "User loged-in", data: isExisting })
     } catch (error) {
         // res.send(500).send(error);
         next(error);
