@@ -16,7 +16,7 @@ const Signup = () => {
             .regex(/[a-z]/, "Password must contain 1 lowercase")
             .regex(/[A-Z]/, "Password must contain 1 uppercase")
             .regex(/[0-9]/, "Password must contain 1 number")
-            .reger(/[\W_]/, "Password must contain 1 special character")
+            .regex(/[\W_]/, "Password must contain 1 special character")
     })
 
     const { register, handleSubmit, formState: { errors } } = useForm({
