@@ -17,69 +17,69 @@ import OpenROutes from '../components/OpenROutes'
 
 const Router = createBrowserRouter([
     {
-        element : <OpenROutes />,
-        children :  [{
-            path : "/",
-            element  : <Home />
+        element: <OpenROutes />,
+        children: [{
+            path: "/",
+            element: <Home />
         },
         {
-            path : "/cart",
-            element  : <Cart />
+            path: "/cart",
+            element: <Cart />
         },]
     },
     {
-        element :  <UnProtected />,
-        children : [
+        element: <UnProtected />,
+        children: [
             {
-                path : "/login",
-                element : <Login />
+                path: "/login",
+                element: <Login />
             },
             {
-                path : "/Signup",
-                element : <Signup />
+                path: "/Signup",
+                element: <Signup />
             },
         ]
     },
     {
-        element : <Protected allowedRole = {["User"]} />,
-        children : [
+        element: <Protected allowedRole={["User"]} />,
+        children: [
             {
-                path : "/order",
-                element : <Order />
+                path: "/order",
+                element: <Order />
             },
             {
-                path : "/myorder",
-                element : <MyOrder />
+                path: "/myorder",
+                element: <MyOrder />
             }
         ]
     },
     {
-        element : <Protected allowedRole = {["Admin"]} />,
-        children : [
+        element: <Protected allowedRole={["Admin"]} />,
+        children: [
             {
-                path : "/dashboard",
-                element : <Dashboard />
+                path: "/dashboard",
+                element: <Dashboard />
             },
             {
-                path : "/adminuser",
-                element : <AdminUser />
+                path: "/adminuser",
+                element: <AdminUser />
             },
             {
-                path : "/adminproduct",
-                element : <AdminProduct />
+                path: "/adminproduct",
+                element: <AdminProduct />
             },
             {
-                path : "/adminorder",
-                element : <AdminOrder />
+                path: "/adminorder",
+                element: <AdminOrder />
             },
         ]
     },
     {
-        element : <Protected allowedRole = {["User","Admin"]} />,
-        children : [
+        element: <Protected allowedRole={["User", "Admin"]} />,
+        children: [
             {
-                path : "/profile",
-                element : <Profile />
+                path: "/profile",
+                element: <Profile />
             }
         ]
     }
