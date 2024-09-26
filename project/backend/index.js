@@ -3,6 +3,7 @@ const cors = require("cors");
 const connectDb = require("./config/db");
 const userRoutes = require("./router/user");
 const authRoutes = require("./router/auth");
+const productRoutes = require("./router/product");
 const errorHandler = require("./middleware/globalErrorHandler");
 const passport = require("passport");
 const session = require("express-session");
@@ -27,6 +28,7 @@ connectDb();
 
 app.use("/auth", userRoutes);
 app.use("/api/auth", authRoutes);
+app.use("/api", productRoutes);
 
 app.use(errorHandler);
 
