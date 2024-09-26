@@ -14,6 +14,7 @@ import AdminProduct from '../components/AdminProduct'
 import AdminOrder from '../components/AdminOrder'
 import Profile from '../components/Profile'
 import OpenROutes from '../components/OpenROutes'
+import GoogleAuth from '../components/GoogleAuth'
 
 const Router = createBrowserRouter([
     {
@@ -37,6 +38,10 @@ const Router = createBrowserRouter([
             {
                 path: "/Signup",
                 element: <Signup />
+            },
+            {
+                path: "/googleauth",
+                element: <GoogleAuth/>
             },
         ]
     },

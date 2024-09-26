@@ -9,14 +9,14 @@ const session = require("express-session");
 const cookie = require("express-session/session/cookie");
 require("dotenv").config();
 require("./config/passport");
- 
+
 const app = express();
 
 app.use(session({
-    secret : "your_secret_key",
-    resave : false,
-    saveUninitialized :  false,
-    cookie : { secure : false }
+    secret: "your_secret_key",
+    resave: false,
+    saveUninitialized: false,
+    cookie: { secure: false }
 }));
 
 app.use(express.json());
@@ -25,12 +25,12 @@ app.use(passport.initialize());
 app.use(passport.session());
 connectDb();
 
-app.use("/auth" , userRoutes);
-app.use("/api/auth" , authRoutes);
+app.use("/auth", userRoutes);
+app.use("/api/auth", authRoutes);
 
 app.use(errorHandler);
 
-app.listen(5000,()=>{
+app.listen(5000, () => {
     console.log("Server is running on http://localhost:5000");
 });
 
