@@ -10,6 +10,7 @@ export const addProduct = createAsyncThunk("product/addProduct",async (data  , {
         rejectWithValue(error);
     }
 })
+
 export const getAllProduct = createAsyncThunk("product/getAllProduct",async (data  , {rejectWithValue})=>{
     try {
         const response = await axios.post("http://localhost:5000/api/product",data);
