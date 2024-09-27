@@ -1,42 +1,37 @@
-import React, { useEffect } from 'react'
-import Button from '@mui/joy/Button';
+import React, { useEffect, useState } from 'react'
 import Modal from '@mui/joy/Modal';
 import ModalClose from '@mui/joy/ModalClose';
 import Typography from '@mui/joy/Typography';
 import Sheet from '@mui/joy/Sheet';
-import { useForm } from 'react-hook-form';
 import { Box } from '@mui/material';
+import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import { addProduct } from '../redux/slices/productSlice';
 
-const ModalComponent = ({ open, setOpen }) => {
+const ProductFormModel = ({ open, setOpen }) => {
+	const { register, handleSubmit } = useForm();
 
-	const { handleSubmit, register } = useForm();
 	const { isProductAdded } = useSelector((state) => state.product);
 
 	const dispatch = useDispatch();
 
 	const onSubmit = (data) => {
-
-
-		console.log("On Submit Hanlder")
-
 		const formData = new FormData();
+
 		formData.append("name", data.name);
 		formData.append("price", data.price);
-		formData.append("category", data.category);
 		formData.append("description", data.description);
+		formData.append("category", data.category);
 		formData.append("productImage", data.productImage[0]);
-
 
 		dispatch(addProduct(formData));
 	}
 
 	useEffect(() => {
-		setOpen(false);
+		if (isProductAdded) {
+			setOpen(false);
+		}
 	}, [isProductAdded]);
-
-	
 	return (
 		<div>
 			<Modal
@@ -48,7 +43,7 @@ const ModalComponent = ({ open, setOpen }) => {
 			>
 				<Sheet
 					variant="outlined"
-					sx={{ maxWidth: 500, borderRadius: 'md', p: 3, boxShadow: 'lg' }}
+					sx={{ minWidth: 300, p: 3, boxShadow: 'lg' }}
 				>
 					<ModalClose variant="plain" sx={{ m: 1 }} />
 					<Typography
@@ -95,4 +90,4 @@ const ModalComponent = ({ open, setOpen }) => {
 	)
 }
 
-export default ModalComponent
+export default ProductFormModel
