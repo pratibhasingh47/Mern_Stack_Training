@@ -3,26 +3,26 @@ import { useSelector } from 'react-redux'
 import { Outlet, useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
 
-const Protected = ({allowedRole}) => {
-    const { isAuth , role } = useSelector((state)=>state.auth);
+const Protected = ({ allowedRole }) => {
+    const { isAuth, role } = useSelector((state) => state.auth);
     const navigate = useNavigate();
-    useEffect(()=>{
-        if(!isAuth){
+    useEffect(() => {
+        if (!isAuth) {
             return navigate("/")
         }
-    },[isAuth]);
+    }, [isAuth]);
 
-    useEffect(()=>{
-        if(!allowedRole.includes(role)){
+    useEffect(() => {
+        if (!allowedRole.includes(role)) {
             return navigate("/")
         }
-    },[role])
-  return (
-    <div className='w-full h-full'>
-        <Navbar />
-        <Outlet />
+    }, [role])
+    return (
+        <div className='w-full h-full'>
+            <Navbar />
+            <Outlet />
         </div>
-  )
+    )
 }
 
 export default Protected
