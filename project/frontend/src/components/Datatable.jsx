@@ -7,30 +7,30 @@ import { getAllProduct } from '../redux/slices/productSlice';
 
 const paginationModel = { page: 0, pageSize: 5 };
 
-export default function DataTable({columns}) {
-  const dispatch = useDispatch();
+export default function DataTable({ columns }) {
+	const dispatch = useDispatch();
 
-  const { products ,   isProductAdded } = useSelector((state)=>state.product);
-  console.log(products);
+	const { products, isProductAdded } = useSelector((state) => state.product);
+	console.log(products);
 
-  React.useEffect(()=>{
-    dispatch(getAllProduct());
-  },[]);
+	React.useEffect(() => {
+		dispatch(getAllProduct());
+	}, []);
 
-  React.useEffect(()=>{
-    if(isProductAdded){
-      dispatch(getAllProduct());
-    }
-  },[isProductAdded])
-  return (
-    <Paper sx={{ height: 400, width: '100%' }}>
-      <DataGrid
-        rows={products}
-        columns={columns}
-        initialState={{ pagination: { paginationModel } }}
-        pageSizeOptions={[5, 10]}
-        sx={{ border: 0 }}
-      />
-    </Paper>
-  );
+	React.useEffect(() => {
+        if (isProductAdded) {
+            dispatch(getAllProduct());
+        }
+    }, [isProductAdded, dispatch]);
+	return (
+		<Paper sx={{ height: 400, width: '100%' }}>
+			<DataGrid
+				rows={products}
+				columns={columns}
+				initialState={{ pagination: { paginationModel } }}
+				pageSizeOptions={[5, 10]}
+				sx={{ border: 0 }}
+			/>
+		</Paper>
+	);
 }

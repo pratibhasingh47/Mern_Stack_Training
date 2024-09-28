@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import DataTable from './DataTable'
+import DataTable from './Datatable'
 import ProductFormModel from './ProductFormModel'
 import { FaEdit } from "react-icons/fa";
 

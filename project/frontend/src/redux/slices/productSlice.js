@@ -6,7 +6,7 @@ export const addProduct = createAsyncThunk(
     async (data , {rejectWithValue})=>{
         try {
             const response = await axios.post("http://localhost:5000/api/product",data);
-        return response;
+        return response.data;
         } catch (error) {
             return rejectWithValue(error);
         }
@@ -17,7 +17,7 @@ export const updateProduct = createAsyncThunk(
     async (data , {rejectWithValue})=>{
         try {
             const response = await axios.put(`http://localhost:5000/api/product/${data._id}`,data);
-        return response;
+        return response.data;
         } catch (error) {
             return rejectWithValue(error);
         }
@@ -28,7 +28,7 @@ export const updateProductWithImage = createAsyncThunk(
     async (data , {rejectWithValue})=>{
         try {
             const response = await axios.put(`http://localhost:5000/api/productWithImage/${data.id}`,data.data);
-        return response;
+        return response.data;
         } catch (error) {
             return rejectWithValue(error);
         }
@@ -39,10 +39,14 @@ export const getAllProduct = createAsyncThunk(
     async (_ , {rejectWithValue})=>{
         try {
             const response = await axios.get("http://localhost:5000/api/product");
-            const updateProducts = response.data.data.map((item,i)=>{
-                return {...item , id : i+1}
-            })
-        return updateProducts.data;
+            // const updateProducts = response.data.data.map((item,i)=>{
+            //     return {...item , id : i+1}
+            // })
+            const updatedProducts = response.data.data.map((item, i) => ({
+                ...item,
+                id: i + 1 // You might want to set a unique ID instead of using index
+            }));
+            return updatedProducts; 
         } catch (error) {
             return rejectWithValue(error);
         }
