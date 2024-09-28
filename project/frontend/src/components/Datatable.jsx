@@ -32,6 +32,7 @@ export default function DataTable({ columns }) {
 				pageSizeOptions={[5, 10]}
 				checkboxSelection
 				sx={{ border: 0 }}
+				// getRowId={(row) => row._id}
 			/>
 		</Paper>
 	);

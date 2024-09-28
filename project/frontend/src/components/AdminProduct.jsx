@@ -88,9 +88,9 @@ const AdminProduct = () => {
 				</div>
 			</div>
 			<div className='m-4 p-4'>
-				<DataTable columns={columns} />
+				<Datatable columns={columns} />
 			</div>
-			<ProductFormModel open={open} setOpen={setOpen} isUpdate={isUpdate} row={rowData} />
+			<ModalComponent open={open} setOpen={setOpen} isUpdate={isUpdate} row={rowData} />
 
 		</div>
 	)

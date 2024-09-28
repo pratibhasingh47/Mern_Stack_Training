@@ -75,6 +75,32 @@ const productSlice = createSlice({
             state.isLoading = false,
             state.error = action.payload?.response?.data
         })
+        .addCase(updateProduct.pending , (state)=>{
+            state.isProductAdded = false;
+            state.isLoading = true
+        })
+        .addCase(updateProduct.fulfilled , (state,action)=>{
+            state.isProductAdded = true;
+            state.isLoading = false;
+            state.error = null
+        })
+        .addCase(updateProduct.rejected , (state , action)=>{
+            state.isLoading = false,
+            state.error = action.payload?.response?.data
+        })
+        .addCase(updateProductWithImage.pending , (state)=>{
+            state.isProductAdded = false;
+            state.isLoading = true
+        })
+        .addCase(updateProductWithImage.fulfilled , (state,action)=>{
+            state.isProductAdded = true;
+            state.isLoading = false;
+            state.error = null
+        })
+        .addCase(updateProductWithImage.rejected , (state , action)=>{
+            state.isLoading = false,
+            state.error = action.payload?.response?.data
+        })
         .addCase(getAllProduct.pending , (state)=>{
             state.isLoading = true
         })

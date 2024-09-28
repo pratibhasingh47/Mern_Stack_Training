@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import DataTable from './Datatable';
+import ModelComponent from './ModalComponent';
+import { FaEdit } from "react-icons/fa";
 
 const columns = [
 	{
@@ -70,7 +73,7 @@ const AdminUser = () => {
 			<div className='m-4 p-4'>
 				<DataTable columns={columns} />
 			</div>
-			<ProductFormModel open={open} setOpen={setOpen} />
+			<ModelComponent open={open} setOpen={setOpen} />
 
 		</div>
 

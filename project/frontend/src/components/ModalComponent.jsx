@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addProduct, updateProduct, updateProductWithImage } from '../redux/slices/productSlice';
 import { FaEdit } from "react-icons/fa";
 
-const ProductFormModel = ({ open, setOpen, isUpdate, row }) => {
+const ModelComponent = ({ open, setOpen, isUpdate, row }) => {
 	const [editImage, setEditImage] = useState(false);
 	const { register, handleSubmit, reset } = useForm();
 
@@ -125,7 +125,7 @@ const ProductFormModel = ({ open, setOpen, isUpdate, row }) => {
 	)
 }
 
-export default ProductFormModel
+export default ModelComponent
 
 
 // import React, { useEffect, useState } from 'react'
