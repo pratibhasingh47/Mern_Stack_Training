@@ -12,6 +12,28 @@ export const addProduct = createAsyncThunk(
         }
     }
 )
+export const updateProduct = createAsyncThunk(
+    'product/updateProduct',
+    async (data , {rejectWithValue})=>{
+        try {
+            const response = await axios.put(`http://localhost:5000/api/product/${data._id}`,data);
+        return response;
+        } catch (error) {
+            return rejectWithValue(error);
+        }
+    }
+)
+export const updateProductWithImage = createAsyncThunk(
+    'product/updateProductWithImage',
+    async (data , {rejectWithValue})=>{
+        try {
+            const response = await axios.put(`http://localhost:5000/api/productWithImage/${data.id}`,data.data);
+        return response;
+        } catch (error) {
+            return rejectWithValue(error);
+        }
+    }
+)
 export const getAllProduct = createAsyncThunk(
     'product/getAllProduct',
     async (data , {rejectWithValue})=>{
