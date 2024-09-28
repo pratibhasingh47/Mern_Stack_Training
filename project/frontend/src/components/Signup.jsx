@@ -84,7 +84,7 @@ const Signup = () => {
                     <button className='bg-blue-500 my-5 text-white font-medium p-2 w-[95%] shadow-xl rounded active:bg-blue-600'>Sign-Up</button>
                 </form>
 
-                <button className='bg-red-500 my-5 text-white font-medium p-2 w-[90%] shadow-xl w-[95%] rounded active:bg-blue-600' onClick={handleGoogleLogin}>Log-In- With Google</button>
+                <button className='bg-red-500 my-5 text-white font-medium p-2 w-[90%] shadow-xl w-\[95\%] rounded active:bg-blue-600' onClick={handleGoogleLogin}>Log-In- With Google</button>
 
             </div>
             
