@@ -13,14 +13,14 @@ const Navbar = () => {
     }
 
     return (
-        <div className='flex justify-between items-center bg-sky-950 px-6 py-4 w-full'>
+        <div className='flex h-28 justify-between items-center bg-sky-950 px-6 py-4 w-full'>
             <div className='text-white text-2xl font-medium'>
             <Link to="/">logo</Link>
             </div>
-            <div>
-                <input type="text" placeholder='Search...' className='p-2 py-1 border border-gray-100 bg-transparent text-white outline-none' />
+            <div className='w-[60%]'>
+                <input type="text" placeholder='Search...' className='p-2 py-1 h-12 w-[100%] border border-gray-100 bg-slate-50 text-white outline-none' />
             </div>
-            <div className='flex gap-5 items-center'>
+            <div className='flex gap-5 text-xl items-center'>
                 {
                     isAuth
                         ?
