@@ -6,7 +6,7 @@ export const addProduct = createAsyncThunk(
     async (data , {rejectWithValue})=>{
         try {
             const response = await axios.post("http://localhost:5000/api/product",data);
-        return response;
+        return response.data;
         } catch (error) {
             return rejectWithValue(error);
         }
