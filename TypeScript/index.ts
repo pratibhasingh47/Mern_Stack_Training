@@ -8,8 +8,8 @@ let b:undefined = undefined;
 
 let arr:string[] = []
 
-let persom : [string , number];
-person = ["Prats" ,47 ];
+// let persom : [string , number];
+// person = ["Prats" ,47 ];
 
 let x :string | number = "abc";
 
@@ -20,3 +20,38 @@ const add= (x:number,y:number): number=>{
 }
 
 console.log(add(14,57));
+
+interface Person {
+    firstName : string,
+    lastName :  string
+}
+
+// let person:Person = {
+//     firstName : "shubham",
+//     lastName : "Jain",
+// }
+
+class Animal{
+    name : string
+
+    constructor(name:string){
+        this.name = name
+    }
+
+    move(number:number){
+        console.log(`${this.name} moved ${number} meter`)
+    }
+}
+
+class Person{
+    public name :string;
+    private age : number
+
+    constructor(name:string , age:number){
+        this.name = name;
+        this.age = age
+    }
+    public getAge(){
+        console.log(this.age);
+    }
+}
