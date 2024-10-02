@@ -51,7 +51,18 @@ class Person{
         this.name = name;
         this.age = age
     }
-    public getAge(){
-        console.log(this.age);
+    // public getAge(){
+    //     console.log(this.age);
+    // }
+    get getAge(){
+        return this.age
+    }
+    set setAge(number:number){
+        this.age = number
     }
 }
+
+const person1 = new Person("Pratibha" , 20);
+
+console.log(person1.getAge);
+person1.setAge = 21
