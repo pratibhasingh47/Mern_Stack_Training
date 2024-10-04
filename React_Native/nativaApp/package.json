@@ -1,5 +1,5 @@
 {
-  "name": "native_app",
+  "name": "nativaapp",
   "version": "1.0.0",
   "main": "expo/AppEntry.js",
   "scripts": {
