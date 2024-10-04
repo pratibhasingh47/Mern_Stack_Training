@@ -1,15 +1,145 @@
 import { StatusBar } from 'expo-status-bar';
-import { Image,StyleSheet, Text, View } from 'react-native';
-import Vector from './assets/favicon.png';
+import { Image, ImageBackground, ScrollView, StyleSheet, Text, View } from 'react-native';
+import Vector  from "./assets/splash.png"
 
 export default function App() {
   return (
-    // <View style = {{ backgroundColor: 'yellow' , width:300, height:300 , padding : 60}} >
-    <View style = {{ backgroundColor: 'yellow' ,flex : 1 ,justifyContent: 'center' , alignItems:'center' , fontSize : 30 , padding : 60}} >
-      <Text style={{fontSize:50 , color:'green'}}>Hello Prat's</Text>
-      <Image source={Vector} style= {{width : 100 , height : 100}}/>
-      <Image source={{uri : "https://github.githubassets.com/assets/pull-shark-default-498c279a747d.png"}} style= {{width : 100 , height : 100}}/>
-    </View>
+    <View style={{backgroundColor : "black" , flex : 1 , justifyContent : "center" , alignItems : "center" , padding : 60}}>
+      {/* <ImageBackground source={Vector} >
+      <Text style={{fontSize : 30 , color : "white"}}>Hello Techno</Text>
+      <Image source={Vector} style={{width : 200 , height : 200}} />
+      <Image source={{uri : "https://images.pexels.com/photos/371589/pexels-photo-371589.jpeg?cs=srgb&dl=clouds-conifer-daylight-371589.jpg&fm=jpg"}} style={{width : 200 , height : 200}} />
+      
+
+      </ImageBackground> */}
+
+      <View>
+        <ScrollView>
+        <Image source={{uri : "https://images.pexels.com/photos/371589/pexels-photo-371589.jpeg?cs=srgb&dl=clouds-conifer-daylight-371589.jpg&fm=jpg"}} style={{width : 400 , height : 400}} />
+        <Text style={{color : "white"}}>
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+        </Text>
+        <Image source={{uri : "https://images.pexels.com/photos/371589/pexels-photo-371589.jpeg?cs=srgb&dl=clouds-conifer-daylight-371589.jpg&fm=jpg"}} style={{width : 400 , height : 400}} />
+        <Text style={{color : "white"}}>
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+          hello this is techno njr
+        </Text>
+        </ScrollView>
+      </View>
+    </View> 
   );
 }
 
