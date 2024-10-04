@@ -8,6 +8,7 @@ export default function App() {
     <View style = {{ backgroundColor: 'yellow' ,flex : 1 ,justifyContent: 'center' , alignItems:'center' , fontSize : 30 , padding : 60}} >
       <Text style={{fontSize:50 , color:'green'}}>Hello Prat's</Text>
       <Image source={Vector} style= {{width : 100 , height : 100}}/>
+      <Image source={{uri : "https://github.githubassets.com/assets/pull-shark-default-498c279a747d.png"}} style= {{width : 100 , height : 100}}/>
     </View>
   );
 }
