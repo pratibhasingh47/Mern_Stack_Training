@@ -1,11 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Image,StyleSheet, Text, View } from 'react-native';
+import Vector from './assets/favicon.png';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    // <View style = {{ backgroundColor: 'yellow' , width:300, height:300 , padding : 60}} >
+    <View style = {{ backgroundColor: 'yellow' ,flex : 1 ,justifyContent: 'center' , alignItems:'center' , fontSize : 30 , padding : 60}} >
+      <Text style={{fontSize:50 , color:'green'}}>Hello Prat's</Text>
+      <Image source={Vector} style= {{width : 100 , height : 100}}/>
     </View>
   );
 }
