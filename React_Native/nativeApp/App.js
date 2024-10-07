@@ -43,20 +43,20 @@ export default function App() {
 			{/* <ActivityIndicator size='large' color='midnightblue' animating={true}/> */}
 
 			{/* <Button title='Show Alert' color='midnightblue' onPress={()=>{
-        		Alert.alert("Invalid Data" , "SubHeading",[
+        Alert.alert("Invalid Data" , "SubHeading",[
             {
-              	text : "cancel",
-              	onPress : ()=>{
+        text : "cancel",
+        onPress : ()=>{
                 console.log('Cancel clicked')
-              }
+        }
             },
             {
-              text : "Ok",
-              onPress : ()=>{
+            text : "Ok",
+            onPress : ()=>{
                 console.log('Ok clicked')
-              }
             }
-          ])
+            }
+        ])
         }} /> */}
 
 		</View>
