@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import { Button, Image, ImageBackground, Modal, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, Alert, Button, Image, ImageBackground, Modal, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import Vector  from "./assets/splash.png"
 import { useState } from 'react';
+import Box from './components/Box';
 
 export default function App() {
 
@@ -9,11 +10,9 @@ export default function App() {
 
 
   return (
-
-
-
-
+    
       <View style={{backgroundColor : "yellow", justifyContent:'center', alignItems:'center', flex:1, paddingTop:30}}>
+        {/* <Box/> */}
         <Text style={{color:"black", fontSize:25}}>Hello Prat's </Text>
         {/* <ImageBackground source={Vector} style={{height:100, width:100}}/> */}
         {/* <Image source={{uri:"https://avatars.githubusercontent.com/u/113748706?v=4"}} style={{height:100, width:100}}/> */}
@@ -33,6 +32,26 @@ export default function App() {
           setOpen(false);
         }} />
         </Modal>
+
+        <StatusBar backgroundColor='lightgreen' barStyle = 'dark-content' />
+        {/* <ActivityIndicator size='large' color='midnightblue' animating={true}/> */}
+
+        {/* <Button title='Show Alert' color='midnightblue' onPress={()=>{
+          Alert.alert("Invalid Data" , "SubHeading",[
+            {
+              text : "cancel",
+              onPress : ()=>{
+                console.log('Cancel clicked')
+              }
+            },
+            {
+              text : "Ok",
+              onPress : ()=>{
+                console.log('Ok clicked')
+              }
+            }
+          ])
+        }} /> */}
 
       </View>
 
