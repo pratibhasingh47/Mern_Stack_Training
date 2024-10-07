@@ -6,47 +6,47 @@ import Box from './components/Box';
 
 export default function App() {
 
-  const [open, setOpen] = useState(false);
+	const [open, setOpen] = useState(false);
 
 
-  return (
+	return (
 
-    <View style={{ backgroundColor: "yellow", justifyContent: 'center', alignItems: 'center', flex: 1, paddingTop: 30 }}>
+		<View style={{ backgroundColor: "yellow", justifyContent: 'center', alignItems: 'center', flex: 1, paddingTop: 30 }}>
 
-      {/* <Box/> */}
+			{/* <Box/> */}
 
-      <Text style={{ color: "black", fontSize: 25 }}>Hello Prat's </Text>
-      {/* <ImageBackground source={Vector} style={{height:100, width:100}}/> */}
-      {/* <Image source={{uri:"https://avatars.githubusercontent.com/u/113748706?v=4"}} style={{height:100, width:100}}/> */}
+			<Text style={{ color: "black", fontSize: 25 }}>Hello Prat's </Text>
+			{/* <ImageBackground source={Vector} style={{height:100, width:100}}/> */}
+			{/* <Image source={{uri:"https://avatars.githubusercontent.com/u/113748706?v=4"}} style={{height:100, width:100}}/> */}
 
-      <Image source={{ uri: "https://i.pinimg.com/originals/65/25/ea/6525ea3430a2145e472ce030dd98bdcb.png" }} style={{ height: 100, width: 100 }} />
+			<Image source={{ uri: "https://i.pinimg.com/originals/65/25/ea/6525ea3430a2145e472ce030dd98bdcb.png" }} style={{ height: 100, width: 100 }} />
 
-      <Button title='Click ME' onPress={() => {
-        console.log("Button Clicked");
-      }} />
+			<Button title='Click ME' onPress={() => {
+				console.log("Button Clicked");
+			}} />
 
-      <Pressable style={{ backgroundColor: 'black', padding: 10 }} onPress={() => { console.log("Pressable component") }} >
-        <Text style={{ color: 'white' }} >Pressable Component</Text>
-      </Pressable>
+			<Pressable style={{ backgroundColor: 'black', padding: 10 }} onPress={() => { console.log("Pressable component") }} >
+				<Text style={{ color: 'white' }} >Pressable Component</Text>
+			</Pressable>
 
-      <Button title="Open Model" onPress={() => {
-        setOpen(true);
-      }} />
-      <Modal visible={open} animationType='slide' >
-        <Button title='Close Modal' onPress={() => {
-          setOpen(false);
-        }} />
-      </Modal>
+			<Button title="Open Model" onPress={() => {
+				setOpen(true);
+			}} />
+			<Modal visible={open} animationType='slide' >
+				<Button title='Close Modal' onPress={() => {
+					setOpen(false);
+				}} />
+			</Modal>
 
-      <StatusBar backgroundColor='lightgreen' barStyle='dark-content' />
-      
-      {/* <ActivityIndicator size='large' color='midnightblue' animating={true}/> */}
+			<StatusBar backgroundColor='lightgreen' barStyle='dark-content' />
 
-      {/* <Button title='Show Alert' color='midnightblue' onPress={()=>{
-          Alert.alert("Invalid Data" , "SubHeading",[
+			{/* <ActivityIndicator size='large' color='midnightblue' animating={true}/> */}
+
+			{/* <Button title='Show Alert' color='midnightblue' onPress={()=>{
+        		Alert.alert("Invalid Data" , "SubHeading",[
             {
-              text : "cancel",
-              onPress : ()=>{
+              	text : "cancel",
+              	onPress : ()=>{
                 console.log('Cancel clicked')
               }
             },
@@ -59,18 +59,18 @@ export default function App() {
           ])
         }} /> */}
 
-    </View>
+		</View>
 
 
 
-  );
+	);
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+	container: {
+		flex: 1,
+		backgroundColor: '#fff',
+		alignItems: 'center',
+		justifyContent: 'center',
+	},
 });
