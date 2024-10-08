@@ -1,63 +1,50 @@
+import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import { ActivityIndicator, Alert, Button, Image, ImageBackground, Modal, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import Vector from "./assets/splash.png"
 import { useState } from 'react';
 import Box from './components/Box';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Login from './components/Login';
+import Signup from './components/Signup';
+import Home from './components/Home';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 export default function App() {
 
 	const [open, setOpen] = useState(false);
 
+	const Stack = createNativeStackNavigator();
+	const Drawer = createDrawerNavigator();
+	const Tab = createBottomTabNavigator();
+
 
 	return (
 
-		<View style={{ backgroundColor: "yellow", justifyContent: 'center', alignItems: 'center', flex: 1, paddingTop: 30 }}>
+		<View style={[styles.container]}>
+			
+			<NavigationContainer>
+				{/* <Stack.Navigator>
+					<Stack.Screen name='Home' component={Home} />
+					<Stack.Screen name='Login' component={Login} />
+				</Stack.Navigator> */}
 
-			{/* <Box/> */}
 
-			<Text style={{ color: "black", fontSize: 25 }}>Hello Prat's </Text>
-			{/* <ImageBackground source={Vector} style={{height:100, width:100}}/> */}
-			{/* <Image source={{uri:"https://avatars.githubusercontent.com/u/113748706?v=4"}} style={{height:100, width:100}}/> */}
+				{/* <Drawer.Navigator>
+					<Drawer.Screen name='Home' component={Home} />
+					<Drawer.Screen name='Login' component={Login} />
+					<Drawer.Screen name='Signup' component={Signup} />
+				</Drawer.Navigator> */}
 
-			<Image source={{ uri: "https://i.pinimg.com/originals/65/25/ea/6525ea3430a2145e472ce030dd98bdcb.png" }} style={{ height: 100, width: 100 }} />
+				<Tab.Navigator>
+					<Tab.Screen name='Home' component={Home} />
+					<Tab.Screen name='Login' component={Login} />
+					<Tab.Screen name='Signup' component={Signup} />
+				</Tab.Navigator>
 
-			<Button title='Click ME' onPress={() => {
-				console.log("Button Clicked");
-			}} />
-
-			<Pressable style={{ backgroundColor: 'black', padding: 10 }} onPress={() => { console.log("Pressable component") }} >
-				<Text style={{ color: 'white' }} >Pressable Component</Text>
-			</Pressable>
-
-			<Button title="Open Model" onPress={() => {
-				setOpen(true);
-			}} />
-			<Modal visible={open} animationType='slide' >
-				<Button title='Close Modal' onPress={() => {
-					setOpen(false);
-				}} />
-			</Modal>
-
-			<StatusBar backgroundColor='lightgreen' barStyle='dark-content' />
-
-			{/* <ActivityIndicator size='large' color='midnightblue' animating={true}/> */}
-
-			{/* <Button title='Show Alert' color='midnightblue' onPress={()=>{
-        Alert.alert("Invalid Data" , "SubHeading",[
-            {
-        text : "cancel",
-        onPress : ()=>{
-                console.log('Cancel clicked')
-        }
-            },
-            {
-            text : "Ok",
-            onPress : ()=>{
-                console.log('Ok clicked')
-            }
-            }
-        ])
-        }} /> */}
+			</NavigationContainer>
 
 		</View>
 
@@ -70,7 +57,7 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		backgroundColor: '#fff',
-		alignItems: 'center',
-		justifyContent: 'center',
+		// alignItems: 'center',
+		// justifyContent: 'center',
 	},
 });
