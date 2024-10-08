@@ -18,46 +18,46 @@ import AppNavigation from './navigations/AppNavigation';
 
 export default function App() {
 
-  const [open , setOpen] = useState(false)
-  const { width , height } = useWindowDimensions();
-  const Stack = createNativeStackNavigator();
-  const Drawer = createDrawerNavigator();
-  const Tab = createBottomTabNavigator();
-  return (
-    <View style={[   styles.container ]}>
-      <NavigationContainer>
-        <AppNavigation  />
-        {/* <Stack.Navigator>
+	const [open, setOpen] = useState(false)
+	const { width, height } = useWindowDimensions();
+	const Stack = createNativeStackNavigator();
+	const Drawer = createDrawerNavigator();
+	const Tab = createBottomTabNavigator();
+	return (
+		<View style={[styles.container]}>
+			<NavigationContainer>
+				<AppNavigation />
+				{/* <Stack.Navigator>
           <Stack.Screen name='Home' component={Home} />
           <Stack.Screen name='Login' component={Login} />
           <Stack.Screen name='Signup' component={Signup} />
         </Stack.Navigator> */}
-        {/* <Drawer.Navigator>
+				{/* <Drawer.Navigator>
           <Drawer.Screen name='Home' component={Home} />
           <Drawer.Screen name='Login' component={Login} />
           <Drawer.Screen name='Signup' component={Signup} />
         </Drawer.Navigator> */}
-        {/* <Tab.Navigator>
+				{/* <Tab.Navigator>
           <Tab.Screen name='Home' component={Home} />
           <Tab.Screen name='Login' component={Login} />
           <Tab.Screen name='Signup' component={Signup} />
         </Tab.Navigator> */}
-      </NavigationContainer>
-      {/* <List /> */}
-      {/* <Inputs /> */}
-      {/* <View style={[styles.box , {width : width > 600 ? 800 : 300   , 
+			</NavigationContainer>
+			{/* <List /> */}
+			{/* <Inputs /> */}
+			{/* <View style={[styles.box , {width : width > 600 ? 800 : 300   , 
     height : height > 600 ? 400 : 400  ,}]}>
         <Text style={styles.boxText}>Hello Techno</Text>
       </View> */}
-      {/* <Box style={{backgroundColor : "red"}}>Box-1</Box>
+			{/* <Box style={{backgroundColor : "red"}}>Box-1</Box>
       <Box style={{backgroundColor : "skyblue"}}>Box-2</Box>
       <Box style={{backgroundColor : "orange"}}>Box-3</Box>
       <Box style={{backgroundColor : "green"}}>Box-4</Box>
       <Box style={{backgroundColor : "blue"}}>Box-5</Box>
       <Box style={{backgroundColor : "yellow"}}>Box-6</Box> */}
-      {/* <StatusBar backgroundColor="lightgreen" barStyle="dark-content" />
+			{/* <StatusBar backgroundColor="lightgreen" barStyle="dark-content" />
       <ActivityIndicator size="large" color="midnightblue" animating={true} /> */}
-      {/* <Button title="Show Alert" color="midnightblue" onPress={()=>{Alert.alert("Invalid Data","Subheading",[
+			{/* <Button title="Show Alert" color="midnightblue" onPress={()=>{Alert.alert("Invalid Data","Subheading",[
         {
           text : "cancel",
           onPress : ()=>{console.log("Cancel Clicked")}
@@ -67,7 +67,7 @@ export default function App() {
           onPress : ()=>{console.log("ok Clicked")}
         },
       ])}}/> */}
-      {/* <ScrollView>
+			{/* <ScrollView>
       <Text>Hello Techno</Text>
       <Image source={{uri : "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"}} style={{width : 400 , height : 400}} />
 
@@ -91,23 +91,25 @@ export default function App() {
           <Text style={{backgroundColor : "green" , color : "white" , padding : 20 , fontSize : 30   , borderWidth : 3 , borderColor : "white" , borderRadius : 10}}>Box</Text>
         </View>
       </ScrollView> */}
-    </View>
-  );
+		</View>
+	);
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex : 1,
-    backgroundColor: 'lightgreen',
+	container: {
+		flex: 1,
+		backgroundColor: 'lightgreen',
 
-    
-    
-  },
-  box : {backgroundColor : "skyblue" , 
-     justifyContent : "center" ,    alignItems : "center"},
-  boxText :  {
-    fontSize : 40,
-    fontWeight : "bold",
-    color : Platform.OS === "android" ? "blue" : "red"
-  }
+
+
+	},
+	box: {
+		backgroundColor: "skyblue",
+		justifyContent: "center", alignItems: "center"
+	},
+	boxText: {
+		fontSize: 40,
+		fontWeight: "bold",
+		color: Platform.OS === "android" ? "blue" : "red"
+	}
 });
